@@ -1,0 +1,5 @@
+# You would think that setting up a bazel package for opencv would be
+# sufficient, but you would be wrong. The compiler does fine with includes
+# using quotes ("opencv2/blah.hpp") but fails with carats
+#  (<opencv2/blah.hpp>). This line seems to be an acceptable workaround.
+build --copt=-I/usr/include/opencv4/
